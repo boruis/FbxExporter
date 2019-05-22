@@ -65,9 +65,9 @@ namespace Assets.UTJ.FbxExporter.Editor
 
             // find mesh name
             var meshFilterComponent = ParentObject.GetComponent<MeshFilter>();
-            if (meshFilterComponent && meshFilterComponent.mesh.vertexCount > 0)
+            if (meshFilterComponent && meshFilterComponent.sharedMesh.vertexCount > 0)
             {
-                tmpSceneInfo.MeshName = meshFilterComponent.mesh.name;
+                tmpSceneInfo.MeshName = meshFilterComponent.sharedMesh.name;
             }
 
             var childrenCount = ParentObject.transform.childCount;
